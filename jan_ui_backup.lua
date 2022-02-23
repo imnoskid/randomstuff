@@ -2954,7 +2954,7 @@ function library:CreateWindow(name, size, hidebutton)
                 return keybind
             end
 
-            function sector:AddDropdown(text, items, default, multichoice, callback, flag)
+            function sector:AddDropdown(text, items, callback, default, multichoice, flag)
                 local dropdown = { }
 
                 dropdown.text = text or ""
