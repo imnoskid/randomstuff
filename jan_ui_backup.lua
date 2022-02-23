@@ -994,7 +994,7 @@ function library:CreateWindow(name, size, hidebutton)
                     return keybind
                 end
 
-                function toggle:AddDropdown(items, default, multichoice, callback, flag)
+                function toggle:AddDropdown(items, callback, default, multichoice, flag)
                     local dropdown = { }
 
                     dropdown.defaultitems = items or { }
@@ -2434,7 +2434,7 @@ function library:CreateWindow(name, size, hidebutton)
                 end
                 colorpicker:Set(colorpicker.default)
 
-                function colorpicker:AddDropdown(items, default, multichoice, callback, flag)
+                function colorpicker:AddDropdown(items, callback, default, multichoice, flag)
                     local dropdown = { }
 
                     dropdown.defaultitems = items or { }
