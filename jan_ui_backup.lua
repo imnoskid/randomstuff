@@ -983,6 +983,7 @@ function library:CreateWindow(name, size, hidebutton)
                                     keybind:Set("None")
                                 end
                             else
+				print(tostring((input.KeyCode)):split(".")[3].." "..tostring(keybind.value))
                                 if keybind.value ~= "None" and tostring((input.KeyCode)):split(".")[3] == keybind.value then
                                     toggle:Set(not toggle.CheckedFrame.Visible)
                                 end
