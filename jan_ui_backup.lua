@@ -962,7 +962,6 @@ function library:CreateWindow(name, size, hidebutton)
                                 library.flags[keybind.flag] = key
                             end
                         end
-			print("#packwatch")
                         keybind.Main.Text = "[" .. key .. "]"
                         keybind.value = key
                         if keybind.flag and keybind.flag ~= "" then
