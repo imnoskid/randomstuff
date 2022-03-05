@@ -2942,7 +2942,7 @@ function library:CreateWindow(name, size, hidebutton)
                                 keybind:Set("None")
                             end
                         else
-                            if keybind.value ~= "None" and input.KeyCode == keybind.value then
+                            if keybind.value ~= "None" and tostring((input.KeyCode)):split(".")[3] == keybind.value then
                                 pcall(keybind.callback)
                             end
                         end
