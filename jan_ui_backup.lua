@@ -908,7 +908,7 @@ function library:CreateWindow(name, size, hidebutton)
                 end
                 toggle:Set(toggle.default)
 
-                function toggle:AddKeybind(default, flag)
+                function toggle:AddKeybind(default, newkeycallback, flag)
                     local keybind = { }
 
                     keybind.default = default or "None"
@@ -979,6 +979,7 @@ function library:CreateWindow(name, size, hidebutton)
                                 keybind.Main.TextColor3 = Color3.fromRGB(136, 136, 136)
                                 if input.UserInputType == Enum.UserInputType.Keyboard then
                                     keybind:Set(tostring((input.KeyCode)):split(".")[3])
+				    pcall(newkeycallback)
                                 else
                                     keybind:Set("None")
                                 end
