@@ -978,7 +978,7 @@ function library:CreateWindow(name, size, hidebutton)
                             if keybind.Main.Text == "[...]" then
                                 keybind.Main.TextColor3 = Color3.fromRGB(136, 136, 136)
                                 if input.UserInputType == Enum.UserInputType.Keyboard then
-                                    keybind:Set(input.KeyCode)
+                                    keybind:Set(tostring((input.KeyCode)):split(".")[3])
                                 else
                                     keybind:Set("None")
                                 end
@@ -2937,7 +2937,7 @@ function library:CreateWindow(name, size, hidebutton)
                         if keybind.Bind.Text == "[...]" then
                             keybind.Bind.TextColor3 = Color3.fromRGB(136, 136, 136)
                             if input.UserInputType == Enum.UserInputType.Keyboard then
-                                keybind:Set(input.KeyCode)
+                                keybind:Set(tostring((input.KeyCode)):split(".")[3])
                             else
                                 keybind:Set("None")
                             end
