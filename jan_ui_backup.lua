@@ -962,7 +962,7 @@ function library:CreateWindow(name, size, hidebutton)
                                 library.flags[keybind.flag] = key
                             end
                         end
-                        keybind.Main.Text = "[" .. (shorter_keycodes[key.Name] or key.Name) .. "]"
+                        keybind.Main.Text = "[" .. (shorter_keycodes[key.Name] or key.Name or key) .. "]"
                         keybind.value = key
                         if keybind.flag and keybind.flag ~= "" then
                             library.flags[keybind.flag] = keybind.value
