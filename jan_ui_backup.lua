@@ -924,7 +924,7 @@ function library:CreateWindow(name, size, hidebutton)
                         ["RightAlt"] = "RALT"
                     }
 
-                    local text = keybind.default == "None" and "[None]"-- or "[" .. (shorter_keycodes[keybind.default.Name] or keybind.default.Name) .. "]"
+                    local text = keybind.default == "None" and "[None]" or "[" .. keybind.default .. "]"-- or "[" .. (shorter_keycodes[keybind.default.Name] or keybind.default.Name) .. "]"
                     local size = textservice:GetTextSize(text, 15, window.theme.font, Vector2.new(2000, 2000))
 
                     keybind.Main = Instance.new("TextButton", toggle.Items)
