@@ -912,7 +912,7 @@ function library:CreateWindow(name, size, hidebutton)
                     local keybind = { }
 
                     keybind.default = default or "None"
-                    keybind.value = (keybind.default):upper
+                    keybind.value = keybind.default
                     keybind.flag = flag or ( (toggle.text or "") .. tostring(#toggle.Items:GetChildren()))
 
                     local shorter_keycodes = {
